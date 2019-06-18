@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <table *ngIf="dagmenus" class="table table-bordered table-striped">
+    <th>Dag/Datum</th>
+    <th>Dagschotel</th>
+    <th>Veggie</th>
+    <th>Soep</th>
+    <tr *ngFor="let dagmenu of dagmenus">
+      <td>{{dagmenu.dag}} [{{dagmenu.datum}}]</td>
+      <td>{{dagmenu.dagschotel.description}} [&euro; {{dagmenu.dagschotel.price}}]</td>
+      <td>{{dagmenu.veggie.description}} [&euro; {{dagmenu.veggie.price}}]</td>
+      <td>{{dagmenu.soep.description}} [&euro; {{dagmenu.soep.price}}]</td>
+    <tr>
+  </table>
+</div>
